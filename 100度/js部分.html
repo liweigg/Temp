@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin: 0;;padding: 0;
+		}
+	#xinyu{
+	font-size: 12px;
+	line-height: 32px;
+	/*margin-left: 12px;*/
+	float: left;
+}
+#xinyu img{
+	display: none;
+}
+
+#xinyu .show{
+	display: block;
+}
+/*#xinyu .yicang{
+	display: none;
+}*/
+#xinyu .mingzi{
+	background-color: #f1f1f1;
+	/*height: 32px;
+	width: 313px;*/
+	border-radius: 5px;
+
+	
+}
+#xinyu .haonan{
+	background-color: #f8f8f8;
+	/*height: 32px;
+	width: 313px;*/
+	border-radius: 5px;
+}
+#xinyu .nan{
+	color: #666666;
+	margin-left: 82px;
+}
+.mingzi_shuzi{
+	color:#cc0d13;font-weight:bold;
+	padding-right: 18px;
+	padding-left: 9px;
+}
+		</style>
+	</head>
+	<body>
+			<div id="xinyu">
+							<div class="haonan">
+								<a href="###"><img src="images/huapi.png" alt=""></a>
+								<p><span class="mingzi_shuzi">02</span><span>保你没见过的古怪餐厅</span><span class="nan">世说新语</span></p>
+							</div>
+							<div class="mingzi">
+								<a href="###"><img src="images/huapi.png" alt=""></a>
+								<p><span class="mingzi_shuzi">02</span><span>保你没见过的古怪餐厅</span><span class="nan">世说新语</span></p>
+							</div>
+							<div class="haonan">
+								<a href="###"><img src="images/huapi.png" alt=""></a>
+								<p><span class="mingzi_shuzi">02</span><span>保你没见过的古怪餐厅</span><span class="nan">世说新语</span></p>
+							</div>
+							<div class="mingzi">
+								<a href="###"><img src="images/huapi.png" alt=""></a>
+							<p><span class="mingzi_shuzi">02</span><span>保你没见过的古怪餐厅</span><span class="nan">世说新语</span></p>
+							</div>
+							<div class="haonan">
+								<a href="###"><img src="images/huapi.png" alt=""></a>
+							<p><span class="mingzi_shuzi">02</span><span>保你没见过的古怪餐厅</span><span class="nan">世说新语</span></p>
+							</div>
+							<div class="mingzi">
+								<a href="###"><img src="images/huapi.png" alt=""></a>
+								<p><span class="mingzi_shuzi">02</span><span>保你没见过的古怪餐厅</span><span class="nan">世说新语</span></p>
+							</div>
+							<div class="haonan">
+							<a href="###"><img src="images/huapi.png" alt=""></a>
+								<p><span class="mingzi_shuzi">02</span><span>保你没见过的古怪餐厅</span><span class="nan">世说新语</span></p>
+							</div>
+
+						</div>
+	</body>
+	<script type="text/javascript">
+		var xinyu = document.getElementById("xinyu");
+		var huapi = xinyu.getElementsByTagName("div");
+		var tup = xinyu.getElementsByTagName("img");
+		var wenzi = xinyu.getElementsByTagName("p");
+		
+		for(var i=0;i<huapi.length;i++){
+			huapi[i].index = i;
+			huapi[i].onmouseenter = function  () {
+					for(var j=0;j<huapi.length;j++){
+						tup[j].style.display="none";
+						wenzi[j].style.display= "block";	
+					}
+					tup[this.index].style.display= "block";
+					wenzi[this.index].style.display = "none";
+			}
+			
+		}
+	</script>
+</html>
