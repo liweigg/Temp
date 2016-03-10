@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="bookmark" type="images/x-icon" href="img/logo.ico" />
+		<link rel="shortcut icon" href="img/logo.ico" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="css/about.css" />
+		<title></title>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="header_wrap">
+				<div class="header">
+					<div class="logo">
+						<img src="img/logo.png" />
+					</div>
+					<div class="nav">
+						<a class="nav_text" href="index.html">Home</a>
+						<a class="nav_text" href="about.html">ABout</a>
+						<a class="nav_text" href="Rendering.html">Readerings</a>
+						<a class="nav_text" href="Animate.html">3D Animate</a>
+						<a class="nav_text" href="BIM.html">BIM</a>
+						<a class="nav_text" href="Contact.html">Contact</a>
+					</div>
+					<div id="menu">
+						<img src="img/menu.png" />
+					</div>
+					<div class="nav_hidden">
+						<a class="nav_text" href="index.html">Home</a>
+						<a class="nav_text" href="about.html">ABout</a>
+						<a class="nav_text" href="Rendering.html">Readerings</a>
+						<a class="nav_text" href="Animate.html">3D Animate</a>
+						<a class="nav_text" href="BIM.html">BIM</a>
+						<a class="nav_text" href="Contact.html">Contact</a>
+					</div>
+
+				</div>
+			</div>
+			<div class="content_wrap">
+				<div class="content">
+					<strong>About Us</strong>
+					<p>Shanghai Shining is a creative corporation which focuses on helping architects and owners turn their construction which is still in design stage into visual images or videos, perfectly showing the essence of construction.</p>
+					<p>Since the year of 1998, we have finished more than 20000 3D visualization creativities of all Kinds of architecture for nearly 2000 architect firms both at home and abroad. We have used 3D technology, shooting, drawing and architectonic to provide
+						the clients with the services of CG images, CG animations, BIM and 3D products finally</p>
+					<ul>
+						<li><img src="img/link1.png" alt="" /></li>
+						<li><img src="img/link2.png" alt="" /></li>
+						<li><img src="img/link3.png" alt="" /></li>
+						<li><img src="img/link4.png" alt="" /></li>
+						<li><img src="img/link5.png" alt="" /></li>
+						<li><img src="img/link6.png" alt="" /></li>
+						<li><img src="img/link7.png" alt="" /></li>
+						<li class="last"><img src="img/link8.png" alt="" /></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="email">
+					<a href="###"><img src="img/mail.png" /><img class="linkShow" src="img/mailC.png" /></a>
+				</div>
+				<div class="friendlink">
+					<a href="###"><img src="img/f.png" /><img class="linkShow" src="img/fC.png" /></a>
+					<a href="###"><img src="img/you.png" /><img class="linkShow" src="img/youC.png" /></a>
+					<a href="###"><img src="img/in.png" /><img class="linkShow" src="img/inC.png" /></a>
+					<a href="###"><img src="img/t.png" /><img class="linkShow" src="img/tC.png" /></a>
+				</div>
+				<div class="copyright">Copyright © 1998-2015 shining Group</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/jquery-1.12.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/nav.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			function  changCss() {
+				if ($(window).width() < 650) {
+//					
+					$(".content_wrap .content ul li").css({
+						"margin-right": '28px'
+					})
+				} else if ($(window).width() > 650) {
+					
+					$(".content_wrap .content ul li").css({
+						"margin-right": '58px'
+					})
+					
+				}
+				
+				if ($(window).width() < 500) {
+					
+					$(".content_wrap .content p").css({
+						"width": "95%"
+					})
+				} else if($(window).width() > 500){
+					$(".content_wrap .content p").css({
+						"width": "490px"
+					})
+				}
+			}
+			$('.nav_text').eq(1).css({
+				'color': 'white',
+				'border': '1px solid white'
+			})
+			$('.nav_hidden .nav_text').eq(1).css({
+		'color': 'white',
+		'border': '1px solid white'
+		})
+			changCss();
+			$(window).on("resize", function() {
+				changCss();
+			})
+		})
+		//
+	</script>
+
+</html>
